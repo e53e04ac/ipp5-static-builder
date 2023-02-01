@@ -30,8 +30,10 @@ export declare namespace Ipp5StaticBuilder {
         readonly srcNodeModulesDirectory: Get<FileEntry>;
         readonly srcAssetsDirectory: Get<FileEntry>;
         readonly runDirectory: Get<FileEntry>;
-        readonly runThirdpartyDirectory: Get<FileEntry>;
-        readonly runAssetsDirectory: Get<FileEntry>;
+        readonly contextDirectory: Get<FileEntry>;
+        readonly contextAppDirectory: Get<FileEntry>;
+        readonly contextThirdpartyDirectory: Get<FileEntry>;
+        readonly contextAssetsDirectory: Get<FileEntry>;
         readonly clearDist: Get<Promise<void>>;
         readonly copyThirdpartyFiles: Get<Promise<void>>;
         readonly copyAssets: Get<Promise<void>>;

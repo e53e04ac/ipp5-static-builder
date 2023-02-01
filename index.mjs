@@ -64,11 +64,17 @@ const constructor = ((options) => {
         runDirectory: hold(() => {
             return _options.tmpDirectory().resolve('ipp5-static-builder', _options.buildId());
         }),
-        runThirdpartyDirectory: hold(() => {
-            return _self.runDirectory().resolve('thirdparty');
+        contextDirectory: hold(() => {
+            return _self.runDirectory().resolve('context');
         }),
-        runAssetsDirectory: hold(() => {
-            return _self.runDirectory().resolve('assets');
+        contextAppDirectory: hold(() => {
+            return _self.contextDirectory().resolve('app');
+        }),
+        contextThirdpartyDirectory: hold(() => {
+            return _self.contextAppDirectory().resolve('thirdparty');
+        }),
+        contextAssetsDirectory: hold(() => {
+            return _self.contextAppDirectory().resolve('assets');
         }),
         clearDist: hold(async () => {
             await _options.distDirectory().deleteDirectory();
@@ -76,12 +82,14 @@ const constructor = ((options) => {
         copyThirdpartyFiles: hold(async () => {
             for (const name of _options.thirdpartyFileNames()) {
                 const src = _self.srcNodeModulesDirectory().resolve(name);
-                const dest = _self.runThirdpartyDirectory().resolve(name);
+                const dest = _self.contextThirdpartyDirectory().resolve(name);
                 await src.copyFile(dest);
             }
         }),
         copyAssets: hold(async () => {
-            await _self.srcAssetsDirectory().copyDirectory(_self.runAssetsDirectory());
+            const src = _self.srcAssetsDirectory();
+            const dest = _self.contextAssetsDirectory();
+            await src.copyDirectory(dest);
         }),
         copyHtmlFiles: hold(async () => {
             await streamPipeline(
@@ -131,7 +139,7 @@ const constructor = ((options) => {
                     trimCustomFragments: false,
                     useShortDoctype: false,
                 }),
-                gulp.dest(_options.distDirectory().path()),
+                gulp.dest(_self.contextAppDirectory().path()),
             );
         }),
         copyCssFiles: hold(async () => {
@@ -167,7 +175,7 @@ const constructor = ((options) => {
                         semicolonAfterLastProperty: false,
                     },
                 }),
-                gulp.dest(_options.distDirectory().path()),
+                gulp.dest(_self.contextAppDirectory().path()),
             );
         }),
         copyJsFiles: hold(async () => {
@@ -183,7 +191,7 @@ const constructor = ((options) => {
                         comments: /^!/,
                     },
                 }),
-                gulp.dest(_options.distDirectory().path()),
+                gulp.dest(_self.contextAppDirectory().path()),
             );
         }),
     });
@@ -201,7 +209,7 @@ const constructor = ((options) => {
             await _self.copyHtmlFiles();
             await _self.copyCssFiles();
             await _self.copyJsFiles();
-            await _self.runDirectory().copyDirectory(_options.distDirectory());
+            await _self.contextAppDirectory().copyDirectory(_options.distDirectory());
         }),
     });
 
