@@ -15,11 +15,14 @@ export declare namespace Ipp5StaticBuilder {
 
     type Options = {
         readonly srcDirectory: ValueOrGet<FileEntry>;
-        readonly srcFileNames: ValueOrGet<string[]>;
-        readonly thirdpartyFileNames: ValueOrGet<string[]>;
         readonly tmpDirectory: ValueOrGet<FileEntry>;
         readonly buildId: ValueOrGet<string>;
         readonly distDirectory: ValueOrGet<FileEntry>;
+    };
+
+    type Metadata = {
+        readonly srcFileNames: string[];
+        readonly thirdpartyFileNames: string[];
     };
 
     type _Self = {
@@ -29,6 +32,10 @@ export declare namespace Ipp5StaticBuilder {
         readonly scriptDirectory: Get<FileEntry>;
         readonly srcNodeModulesDirectory: Get<FileEntry>;
         readonly srcAssetsDirectory: Get<FileEntry>;
+        readonly srcMetadataFile: Get<FileEntry>;
+        readonly srcMetadata: Get<Metadata>;
+        readonly srcFileNames: Get<string[]>;
+        readonly thirdpartyFileNames: Get<string[]>;
         readonly runDirectory: Get<FileEntry>;
         readonly contextDirectory: Get<FileEntry>;
         readonly contextAppDirectory: Get<FileEntry>;

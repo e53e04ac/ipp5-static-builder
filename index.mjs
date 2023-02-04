@@ -24,12 +24,6 @@ const constructor = ((options) => {
         srcDirectory: hold(() => {
             return unwrap(options.srcDirectory);
         }),
-        srcFileNames: hold(() => {
-            return unwrap(options.srcFileNames);
-        }),
-        thirdpartyFileNames: hold(() => {
-            return unwrap(options.thirdpartyFileNames);
-        }),
         tmpDirectory: hold(() => {
             return unwrap(options.tmpDirectory);
         }),
@@ -61,6 +55,18 @@ const constructor = ((options) => {
         srcAssetsDirectory: hold(() => {
             return _options.srcDirectory().resolve('assets');
         }),
+        srcMetadataFile: hold(() => {
+            return _options.srcDirectory().resolve('metadata.json');
+        }),
+        srcMetadata: hold(() => {
+            return _self.srcMetadataFile().readJsonSync();
+        }),
+        srcFileNames: hold(() => {
+            return _self.srcMetadata().srcFileNames;
+        }),
+        thirdpartyFileNames: hold(() => {
+            return _self.srcMetadata().thirdpartyFileNames;
+        }),
         runDirectory: hold(() => {
             return _options.tmpDirectory().resolve('ipp5-static-builder', _options.buildId());
         }),
@@ -80,7 +86,7 @@ const constructor = ((options) => {
             await _options.distDirectory().deleteDirectory();
         }),
         copyThirdpartyFiles: hold(async () => {
-            for (const name of _options.thirdpartyFileNames()) {
+            for (const name of _self.thirdpartyFileNames()) {
                 const src = _self.srcNodeModulesDirectory().resolve(name);
                 const dest = _self.contextThirdpartyDirectory().resolve(name);
                 await src.copyFile(dest);
@@ -93,7 +99,7 @@ const constructor = ((options) => {
         }),
         copyHtmlFiles: hold(async () => {
             await streamPipeline(
-                gulp.src(_options.srcFileNames().filter((name) => {
+                gulp.src(_self.srcFileNames().filter((name) => {
                     return name.endsWith('.html');
                 }), {
                     cwd: _options.srcDirectory().path(),
@@ -144,7 +150,7 @@ const constructor = ((options) => {
         }),
         copyCssFiles: hold(async () => {
             await streamPipeline(
-                gulp.src(_options.srcFileNames().filter((name) => {
+                gulp.src(_self.srcFileNames().filter((name) => {
                     return name.endsWith('.css');
                 }), {
                     cwd: _options.srcDirectory().path(),
@@ -180,7 +186,7 @@ const constructor = ((options) => {
         }),
         copyJsFiles: hold(async () => {
             await streamPipeline(
-                gulp.src(_options.srcFileNames().filter((name) => {
+                gulp.src(_self.srcFileNames().filter((name) => {
                     return name.endsWith('.js');
                 }), {
                     cwd: _options.srcDirectory().path(),
