@@ -10,7 +10,7 @@ import { Ipp5StaticBuilder } from 'e53e04ac/ipp5-static-builder';
 
 ~~~~~ mermaid
 graph RL;
-  A(["e53e04ac/ipp5-static-builder"]);
+  A(["package.json"]);
   subgraph "dependencies";
     B_0(["e53e04ac/event-emitter"]);
     B_1(["e53e04ac/file-entry-native"]);
@@ -30,28 +30,28 @@ graph RL;
     B_13(["@types/uglify-es"]);
     B_14(["e53e04ac/file-entry"]);
   end;
-  A --reference--> B_0;
-  A --reference--> B_1;
-  A --reference--> B_2;
-  A --reference--> B_3;
-  A --reference--> B_4;
-  A --reference--> B_5;
-  A --reference--> B_6;
-  A --reference--> B_7;
-  A --reference--> B_8;
-  A --reference--> B_9;
-  A --reference--> B_10;
-  A --reference--> B_11;
-  A --reference--> B_12;
-  A --reference--> B_13;
-  A --reference--> B_14;
-  click B_0 "https://github.com/e53e04ac/event-emitter/tree/289e6320381f1be4d43177944eca0a12b665c4f7";
-  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/4bbe53dfa25202c8fb2a5865ea3b35a7eab10b07";
+  A ----> B_0;
+  A ----> B_1;
+  A ----> B_2;
+  A ----> B_3;
+  A ----> B_4;
+  A ----> B_5;
+  A ----> B_6;
+  A ----> B_7;
+  A ----> B_8;
+  A ----> B_9;
+  A ----> B_10;
+  A ----> B_11;
+  A ----> B_12;
+  A ----> B_13;
+  A ----> B_14;
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/0c338d821268a5f0aaa42481216fd2e73c8734c9";
+  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/874175e9fe9373cd4b0ce7d96ef744f2e41898b0";
   click B_2 "https://www.npmjs.org/package/gulp/v/4.0.2";
   click B_3 "https://www.npmjs.org/package/gulp-clean-css/v/4.3.0";
   click B_4 "https://www.npmjs.org/package/gulp-htmlmin/v/5.0.1";
   click B_5 "https://www.npmjs.org/package/gulp-uglify/v/3.0.2";
-  click B_6 "https://github.com/e53e04ac/hold/tree/2143f5f52192ae4156ea0af80d41c87c55355e9c";
+  click B_6 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
   click B_7 "https://www.npmjs.org/package/uglify-es/v/3.3.9";
   click B_8 "https://www.npmjs.org/package/@types/gulp/v/4.0.10";
   click B_9 "https://www.npmjs.org/package/@types/gulp-clean-css/v/4.3.0";
@@ -59,60 +59,67 @@ graph RL;
   click B_11 "https://www.npmjs.org/package/@types/gulp-uglify/v/3.0.7";
   click B_12 "https://www.npmjs.org/package/@types/node/v/18.13.0";
   click B_13 "https://www.npmjs.org/package/@types/uglify-es/v/3.0.0";
-  click B_14 "https://github.com/e53e04ac/file-entry/tree/923119d07163b8f91b6138367a04760041225a06";
+  click B_14 "https://github.com/e53e04ac/file-entry/tree/54166105381939e5a1c4dee0af1f44705e5f44bc";
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  subgraph "e53e04ac/ipp5-static-builder"
-    C0("index.mjs");
-    C1("index.d.ts");
+graph RL;
+  A(["index.mjs"])
+  subgraph "node:stream/promises";
+    B_0_0(["pipeline"]);
   end;
-  subgraph "node:stream/promises"
-    D0(["pipeline"]);
+  subgraph "gulp";
+    B_1_0(["default"]);
   end;
-  subgraph "gulp"
-    D1(["default"]);
+  subgraph "gulp-clean-css";
+    B_2_0(["default"]);
   end;
-  subgraph "gulp-clean-css"
-    D2(["default"]);
+  subgraph "gulp-htmlmin";
+    B_3_0(["default"]);
   end;
-  subgraph "gulp-htmlmin"
-    D3(["default"]);
+  subgraph "gulp-uglify/composer.js";
+    B_4_0(["default"]);
   end;
-  subgraph "gulp-uglify/composer.js"
-    D4(["default"]);
+  subgraph "uglify-es";
+    B_5_0(["default"]);
   end;
-  subgraph "uglify-es"
-    D5(["default"]);
+  subgraph "event-emitter";
+    B_6_0(["EventEmitter"]);
   end;
-  subgraph "event-emitter"
-    D6(["EventEmitter"]);
+  subgraph "file-entry-native";
+    B_7_0(["FileEntry"]);
   end;
-  subgraph "file-entry-native"
-    D7(["FileEntry"]);
+  subgraph "hold";
+    B_8_0(["hold"]);
+    B_8_1(["unwrap"]);
   end;
-  subgraph "hold"
-    D8(["hold"]);
-    D9(["unwrap"]);
-    D11(["Get"]);
-    D12(["ValueOrGet"]);
+  A ----> B_0_0;
+  A ----> B_1_0;
+  A ----> B_2_0;
+  A ----> B_3_0;
+  A ----> B_4_0;
+  A ----> B_5_0;
+  A ----> B_6_0;
+  A ----> B_7_0;
+  A ----> B_8_0;
+  A ----> B_8_1;
+~~~~~
+
+~~~~~ mermaid
+graph RL;
+  A(["index.d.ts"])
+  subgraph "event-emitter";
+    B_0_0(["EventEmitter"]);
   end;
-  subgraph "file-entry"
-    D10(["FileEntry"]);
+  subgraph "file-entry";
+    B_1_0(["FileEntry"]);
   end;
-  D0 --import--> C0;
-  D1 --import--> C0;
-  D2 --import--> C0;
-  D3 --import--> C0;
-  D4 --import--> C0;
-  D5 --import--> C0;
-  D6 --import--> C0;
-  D7 --import--> C0;
-  D8 --import--> C0;
-  D9 --import--> C0;
-  D6 --import--> C1;
-  D10 --import--> C1;
-  D11 --import--> C1;
-  D12 --import--> C1;
+  subgraph "hold";
+    B_2_0(["Get"]);
+    B_2_1(["ValueOrGet"]);
+  end;
+  A ----> B_0_0;
+  A ----> B_1_0;
+  A ----> B_2_0;
+  A ----> B_2_1;
 ~~~~~
