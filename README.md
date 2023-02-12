@@ -46,7 +46,7 @@ graph RL;
   A ----> B_13;
   A ----> B_14;
   click B_0 "https://github.com/e53e04ac/event-emitter/tree/58fd3772aa6977c80111d1af5425c38551c0da3e";
-  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/0e0f87721b3753446d291c2ed8bd1755a851d321";
+  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/8d4c8db60b7d7a4d70ba04bb54e91e790e7a364c";
   click B_2 "https://www.npmjs.org/package/gulp/v/4.0.2";
   click B_3 "https://www.npmjs.org/package/gulp-clean-css/v/4.3.0";
   click B_4 "https://www.npmjs.org/package/gulp-htmlmin/v/5.0.1";
@@ -59,7 +59,7 @@ graph RL;
   click B_11 "https://www.npmjs.org/package/@types/gulp-uglify/v/3.0.7";
   click B_12 "https://www.npmjs.org/package/@types/node/v/18.13.0";
   click B_13 "https://www.npmjs.org/package/@types/uglify-es/v/3.0.0";
-  click B_14 "https://github.com/e53e04ac/file-entry/tree/77cbd9d0db1e4a74fd5af363999096d9172bd83d";
+  click B_14 "https://github.com/e53e04ac/file-entry/tree/1e3035ecbfc2497f07f1c6d1664936e5b532465e";
 ~~~~~
 
 ~~~~~ mermaid
