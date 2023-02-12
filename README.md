@@ -45,13 +45,13 @@ graph RL;
   A ----> B_12;
   A ----> B_13;
   A ----> B_14;
-  click B_0 "https://github.com/e53e04ac/event-emitter/tree/58fd3772aa6977c80111d1af5425c38551c0da3e";
-  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/6235b010d480ef2922c4759443e7bf906b55e12b";
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/b3a7678f84ede6ae2111a8802360b326a57d3ef2";
+  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/d139b782b7b2ed7b9ddc56dc6286011f5bd97df9";
   click B_2 "https://www.npmjs.org/package/gulp/v/4.0.2";
   click B_3 "https://www.npmjs.org/package/gulp-clean-css/v/4.3.0";
   click B_4 "https://www.npmjs.org/package/gulp-htmlmin/v/5.0.1";
   click B_5 "https://www.npmjs.org/package/gulp-uglify/v/3.0.2";
-  click B_6 "https://github.com/e53e04ac/hold/tree/5dd6f94b8ecd94f98219a7afae52320676380c27";
+  click B_6 "https://github.com/e53e04ac/hold/tree/b0b5ef032800af76c6e7ae27472dbf25a04a947d";
   click B_7 "https://www.npmjs.org/package/uglify-es/v/3.3.9";
   click B_8 "https://www.npmjs.org/package/@types/gulp/v/4.0.10";
   click B_9 "https://www.npmjs.org/package/@types/gulp-clean-css/v/4.3.0";
@@ -59,7 +59,7 @@ graph RL;
   click B_11 "https://www.npmjs.org/package/@types/gulp-uglify/v/3.0.7";
   click B_12 "https://www.npmjs.org/package/@types/node/v/18.13.0";
   click B_13 "https://www.npmjs.org/package/@types/uglify-es/v/3.0.0";
-  click B_14 "https://github.com/e53e04ac/file-entry/tree/5e7bd3bb6438d7a2d7019e184729b9390342bb7d";
+  click B_14 "https://github.com/e53e04ac/file-entry/tree/429c78131e3cf32e41b18aeb702195320736eea8";
 ~~~~~
 
 ~~~~~ mermaid
