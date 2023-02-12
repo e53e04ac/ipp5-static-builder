@@ -6,7 +6,6 @@ npm install e53e04ac/ipp5-static-builder
 
 ~~~~~ mjs
 import { Ipp5StaticBuilder } from 'e53e04ac/ipp5-static-builder';
-import { Ipp5StaticBuilder } from 'e53e04ac/ipp5-static-builder';
 ~~~~~
 
 ~~~~~ mermaid
@@ -46,13 +45,13 @@ graph RL;
   A ----> B_12;
   A ----> B_13;
   A ----> B_14;
-  click B_0 "https://github.com/e53e04ac/event-emitter/tree/684f3b21090807e48917ae6591611f4eb2b1e661";
-  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/d18fec26c8d54d028c89fe513c9e51f713867e44";
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/58fd3772aa6977c80111d1af5425c38551c0da3e";
+  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/0e0f87721b3753446d291c2ed8bd1755a851d321";
   click B_2 "https://www.npmjs.org/package/gulp/v/4.0.2";
   click B_3 "https://www.npmjs.org/package/gulp-clean-css/v/4.3.0";
   click B_4 "https://www.npmjs.org/package/gulp-htmlmin/v/5.0.1";
   click B_5 "https://www.npmjs.org/package/gulp-uglify/v/3.0.2";
-  click B_6 "https://github.com/e53e04ac/hold/tree/67e5b60f9bb3221f8b200107c13e89a604a93631";
+  click B_6 "https://github.com/e53e04ac/hold/tree/5dd6f94b8ecd94f98219a7afae52320676380c27";
   click B_7 "https://www.npmjs.org/package/uglify-es/v/3.3.9";
   click B_8 "https://www.npmjs.org/package/@types/gulp/v/4.0.10";
   click B_9 "https://www.npmjs.org/package/@types/gulp-clean-css/v/4.3.0";
@@ -60,7 +59,7 @@ graph RL;
   click B_11 "https://www.npmjs.org/package/@types/gulp-uglify/v/3.0.7";
   click B_12 "https://www.npmjs.org/package/@types/node/v/18.13.0";
   click B_13 "https://www.npmjs.org/package/@types/uglify-es/v/3.0.0";
-  click B_14 "https://github.com/e53e04ac/file-entry/tree/eb9b340b50a6a171cda08fa63be4e647bd77caba";
+  click B_14 "https://github.com/e53e04ac/file-entry/tree/77cbd9d0db1e4a74fd5af363999096d9172bd83d";
 ~~~~~
 
 ~~~~~ mermaid
@@ -113,8 +112,8 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-static-builder";
-    E_0(["Ipp5StaticBuilder"]);
-    E_1(["Ipp5StaticBuilder"]);
+    E_0(["type Ipp5StaticBuilder"]);
+    E_1(["const Ipp5StaticBuilder"]);
   end;
   M(["index.d.ts"])
   subgraph "event-emitter";
