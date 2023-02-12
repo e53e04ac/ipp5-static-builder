@@ -45,8 +45,8 @@ graph RL;
   A ----> B_12;
   A ----> B_13;
   A ----> B_14;
-  click B_0 "https://github.com/e53e04ac/event-emitter/tree/b3a7678f84ede6ae2111a8802360b326a57d3ef2";
-  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/d139b782b7b2ed7b9ddc56dc6286011f5bd97df9";
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/93b9f205a7be92bb920d2d4f13efa78be7b4ba5d";
+  click B_1 "https://github.com/e53e04ac/file-entry-native/tree/d43936715ed35379b9739953facede178c870ef8";
   click B_2 "https://www.npmjs.org/package/gulp/v/4.0.2";
   click B_3 "https://www.npmjs.org/package/gulp-clean-css/v/4.3.0";
   click B_4 "https://www.npmjs.org/package/gulp-htmlmin/v/5.0.1";
@@ -59,7 +59,7 @@ graph RL;
   click B_11 "https://www.npmjs.org/package/@types/gulp-uglify/v/3.0.7";
   click B_12 "https://www.npmjs.org/package/@types/node/v/18.13.0";
   click B_13 "https://www.npmjs.org/package/@types/uglify-es/v/3.0.0";
-  click B_14 "https://github.com/e53e04ac/file-entry/tree/429c78131e3cf32e41b18aeb702195320736eea8";
+  click B_14 "https://github.com/e53e04ac/file-entry/tree/c0427d9ba9c8481a9e2acf4af4e7aa46b96314a9";
 ~~~~~
 
 ~~~~~ mermaid
@@ -112,8 +112,9 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-static-builder";
-    E_0(["type Ipp5StaticBuilder"]);
-    E_1(["const Ipp5StaticBuilder"]);
+    E_0(["namespace Ipp5StaticBuilder"]);
+    E_1(["type Ipp5StaticBuilder"]);
+    E_2(["const Ipp5StaticBuilder"]);
   end;
   M(["index.d.ts"])
   subgraph "event-emitter";
@@ -132,4 +133,5 @@ graph RL;
   M ----> I_2_1;
   E_0 ----> M;
   E_1 ----> M;
+  E_2 ----> M;
 ~~~~~
