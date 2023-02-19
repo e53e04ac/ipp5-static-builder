@@ -11,7 +11,10 @@ import { ValueOrGet } from 'hold';
 
 export declare namespace Ipp5StaticBuilder {
 
-    type EventSpecs = Record<never, never>;
+    type Metadata = {
+        readonly srcFileNames: string[];
+        readonly thirdpartyFileNames: string[];
+    };
 
     type Options = {
         readonly srcDirectory: ValueOrGet<FileEntry>;
@@ -20,10 +23,7 @@ export declare namespace Ipp5StaticBuilder {
         readonly distDirectory: ValueOrGet<FileEntry>;
     };
 
-    type Metadata = {
-        readonly srcFileNames: string[];
-        readonly thirdpartyFileNames: string[];
-    };
+    type EventSpecs = Record<never, never>;
 
     type _Self = {
         readonly options: Get<Options>;
