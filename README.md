@@ -5,7 +5,7 @@ npm install e53e04ac/ipp5-static-builder
 ~~~~~
 
 ~~~~~ mjs
-import { Ipp5StaticBuilder } from 'e53e04ac/ipp5-static-builder';
+import { Ipp5StaticBuilder } from 'ipp5-static-builder';
 ~~~~~
 
 ~~~~~ mermaid
@@ -31,10 +31,10 @@ graph RL;
     B_14(["file-entry"]);
   end;
   subgraph "github";
-    C_0(["e53e04ac/event-emitter\naea7d828d486572514f193752191206e0cbeeaa5"]);
-    C_1(["e53e04ac/file-entry-native\n28461cf367f875f2a2f6250f4adb4db316354162"]);
-    C_6(["e53e04ac/hold\n593585d63bb24dc044f13a88375b53f9fa565229"]);
-    C_14(["e53e04ac/file-entry\n3b584f55af253b70ed8fddf4d804848782ef8705"]);
+    C_0(["e53e04ac/event-emitter\n1c42c278687d626fd9dbc9da241e899e482bac0d"]);
+    C_1(["e53e04ac/file-entry-native\n22984416ba3546fcb5df0a50a450e3d9ec308d5b"]);
+    C_6(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
+    C_14(["e53e04ac/file-entry\n31d65a68d97f3f8fd6a45b621b8a3d8245aa1e54"]);
   end;
   subgraph "npmjs";
     C_2(["gulp\n4.0.2"]);
@@ -79,13 +79,13 @@ graph RL;
   B_12 ----> C_12;
   B_13 ----> C_13;
   B_14 ----> C_14;
-  click C_0 "https://github.com/e53e04ac/event-emitter/tree/aea7d828d486572514f193752191206e0cbeeaa5";
-  click C_1 "https://github.com/e53e04ac/file-entry-native/tree/28461cf367f875f2a2f6250f4adb4db316354162";
+  click C_0 "https://github.com/e53e04ac/event-emitter/tree/1c42c278687d626fd9dbc9da241e899e482bac0d";
+  click C_1 "https://github.com/e53e04ac/file-entry-native/tree/22984416ba3546fcb5df0a50a450e3d9ec308d5b";
   click C_2 "https://www.npmjs.com/package/gulp/v/4.0.2";
   click C_3 "https://www.npmjs.com/package/gulp-clean-css/v/4.3.0";
   click C_4 "https://www.npmjs.com/package/gulp-htmlmin/v/5.0.1";
   click C_5 "https://www.npmjs.com/package/gulp-uglify/v/3.0.2";
-  click C_6 "https://github.com/e53e04ac/hold/tree/593585d63bb24dc044f13a88375b53f9fa565229";
+  click C_6 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
   click C_7 "https://www.npmjs.com/package/uglify-es/v/3.3.9";
   click C_8 "https://www.npmjs.com/package/@types/gulp/v/4.0.10";
   click C_9 "https://www.npmjs.com/package/@types/gulp-clean-css/v/4.3.0";
@@ -93,7 +93,7 @@ graph RL;
   click C_11 "https://www.npmjs.com/package/@types/gulp-uglify/v/3.0.7";
   click C_12 "https://www.npmjs.com/package/@types/node/v/18.14.1";
   click C_13 "https://www.npmjs.com/package/@types/uglify-es/v/3.0.0";
-  click C_14 "https://github.com/e53e04ac/file-entry/tree/3b584f55af253b70ed8fddf4d804848782ef8705";
+  click C_14 "https://github.com/e53e04ac/file-entry/tree/31d65a68d97f3f8fd6a45b621b8a3d8245aa1e54";
 ~~~~~
 
 ~~~~~ mermaid
