@@ -68,7 +68,7 @@ const constructor = ((options) => {
             return _self.srcMetadata().thirdpartyFileNames;
         }),
         runDirectory: hold(() => {
-            return _options.tmpDirectory().resolve('ipp5-static-builder', _options.buildId());
+            return _options.tmpDirectory().resolve(_options.buildId());
         }),
         contextDirectory: hold(() => {
             return _self.runDirectory().resolve('context');
